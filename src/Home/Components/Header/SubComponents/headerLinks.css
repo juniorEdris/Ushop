@@ -1,0 +1,26 @@
+.header_top_links{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 7px;
+    padding-bottom: -7px;
+}
+.header_top_left_links,.header_top_right_links{
+    display: flex;
+}
+.header_top_left_links li a{
+    color: var(--btn-color);
+    margin-right:10px ;
+}
+.header_top_right_links li a{
+    color: var(--btn-color);
+    margin-left:10px;
+}
+.selected_curr,.selected_lang{
+    font-weight: 700;
+    margin-left: 5px;
+}
+.lnr{
+    font-weight: 600;
+    margin-left: 5px;
+    font-size: 13px;
+}
