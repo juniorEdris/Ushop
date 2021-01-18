@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
-:root{
-  --primary-color:#FFD819;
-  --btn-color:#0F0F1D;
-  --muted-color:#8B8B8B;
-  --primary-font:'Lato', sans-serif;
+:root {
+  --primary-color: #ffd819;
+  --btn-color: #0f0f1d;
+  --muted-color: #8b8b8b;
+  --secondary-muted-color: #707070;
+  --primary-font: 'Lato', sans-serif;
 }
-*{
+* {
   margin: 0;
-  padding:0;
+  padding: 0;
   list-style: none;
   text-decoration: none;
   font-family: var(--primary-font);
@@ -18,11 +19,236 @@
 /*-------------------------------
   All Global css
 ---------------------------------*/
-.d-hidden{
+.d-hidden {
   display: none;
 }
-.d-shown{
+.d-shown {
   display: block;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+a {
+  text-decoration: none;
+  color: var(--btn-color) !important;
+}
+a:hover {
+  text-decoration: none !important;
+  color: var(--btn-color) !important;
+}
+.container {
+  padding: 0 !important;
+}
+
+/*-------------------------
+  Header All Css
+---------------------------*/
+.header {
+  height: 142px;
+  background-color: var(--primary-color);
+}
+/*-------------------------
+  Header Middle Css
+---------------------------*/
+
+.header_middle {
+  margin-top: 10px;
+}
+
+/*-------------------------
+  Header Search Component css
+---------------------------*/
+.input-group {
+  background-color: #ffffff;
+  padding: 0px !important;
+  height: 100%;
+}
+.select-css {
+  width: 155px;
+  border: none;
+  border-right: 1px solid var(--secondary-muted-color);
+  padding-left: 15px;
+  font-size: 17px;
+  font-weight: 600;
+}
+.select-css option {
+  border-bottom: 1px solid var(--muted-color);
+  padding: 10px 0;
+}
+.search-input {
+  height: 40px !important;
+  border: none !important;
+}
+.search-input::placeholder {
+  color: var(--secondary-muted-color);
+  padding-left: 15px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.input-group-append .lnr {
+  font-size: 15px;
+  font-weight: 900;
+}
+
+/*-------------------------
+  Header Service Info css
+---------------------------*/
+
+.header_service_info .number {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: normal;
+}
+/*-------------------------
+  Navigation CSS here
+---------------------------*/
+.navigation {
+  height: 50px;
+  background-color: var(--primary-color);
+  position: relative;
+}
+/*-------------------------
+  Category dropdown CSS here
+---------------------------*/
+
+.category_dropdown {
+  background-color: #fff;
+  border: 2px solid var(--primary-color);
+  position: absolute;
+  top: 20;
+  z-index: 1000;
+}
+.category_dropdown .dropdown_btn {
+  height: 50px;
+}
+.category_dropdown .dropdown_btn .btn_text {
+  font-size: 18px;
+  margin-left: 10px;
+}
+.category_dropdown .dropdown_btn {
+  display: block;
+  padding: 10px 10px 10px 30px; /*top right bottom left*/
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  cursor: pointer;
+}
+.category_dropdown .dropdown_btn .lnr {
+  font-size: 20px;
+}
+.category_dropdown ul.category_list a li {
+  padding-top: 10px;
+  padding-left: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: capitalize;
+}
+.category_dropdown ul.category_list a:not(:last-child) > li {
+  border-bottom: 1px solid var(--muted-color) !important;
+  padding-bottom: 10px;
+}
+/*------------------------
+  Page Routes component
+--------------------------*/
+.route_page_links {
+  height: 50px;
+}
+.page_links a li {
+  line-height: 50px;
+  text-transform: capitalize;
+  font-size: 18px;
+  margin-left: 25px;
+}
+
+/*------------------------
+  Nav buttons component
+--------------------------*/
+.nav_button {
+  line-height: 50px;
+  height: fit-content;
+}
+.nav_button span.icon {
+  font-size: 28px;
+  font-weight: 400;
+  margin-left: 20px;
+}
+.nav_button span.count {
+  background-color: var(--btn-color);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 11px;
+  height: 20px;
+  right: 53px;
+  line-height: 20px;
+  position: absolute;
+  text-align: center;
+  top: -6px;
+  width: 20px;
+}
+.cart_drop_down {
+  background-color: #fff;
+  padding: 15px;
+  border: 2px solid var(--primary-color);
+  top: 30px;
+  right: 20px;
+  position: absolute;
+}
+.user_drop_down {
+  background-color: #fff;
+  padding: 15px;
+  border: 2px solid var(--primary-color);
+  top: 30px;
+  right: 0px;
+  position: absolute;
+}
+
+/*-------------------------------------
+  Home Banner Css here
+---------------------------------------*/
+.slider-area {
+  width: 100%;
+  position: relative;
+}
+.single-slider {
+  background-position: center center;
+  background-size: cover;
+  height: 400px;
+}
+
+.slider-text h1 {
+  color: #fff;
+  font-size: 31px;
+  line-height: 38px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.slider-text p {
+  font-size: 16px;
+  margin-bottom: 55px;
+  margin-top: 20px;
+  line-height: 25px;
+  color: #fff;
+}
+
+.btn-1.home-btn {
+  background: var(--primary-color);
+  color: var(--btn-color);
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 46px;
+  padding: 0 24px;
+  text-transform: capitalize;
+}
+
+.btn-1.home-btn:hover {
+  background: var(--primary-color);
+  color: #fff !important;
 }
 /* .App {
   text-align: center;
