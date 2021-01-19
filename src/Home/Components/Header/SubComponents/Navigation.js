@@ -5,8 +5,8 @@ import PageRoutes from './PageRoutes'
 
 function Navigation() {
     return (
-        <div className='navigation '>
-            <div className="container d-flex">
+        <div className='navigation'>
+            <div className="navigation_container container">
                 <Dropdown/>
                 <PageRoutes/>
                 <NavButtons/>

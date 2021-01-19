@@ -6,9 +6,9 @@ import ServiceContact from './ServiceContact'
 function HeaderMiddle() {
 
     return (
-        <div className='d-flex justify-content-between container align-items-center header_middle'>
+        <div className='header_middle d-flex justify-content-between container align-items-center'>
             <Logo/>
-            <SearchInput/>
+            <SearchInput />
             <ServiceContact/>
         </div>
     )
