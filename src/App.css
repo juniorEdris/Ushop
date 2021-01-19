@@ -64,7 +64,7 @@ a:hover {
 
 .ham-burger {
   display: block !important;
-  padding: 13px 20px;
+  padding-top: 7px;
 }
 .ham-burger > span {
   height: 3px;
@@ -76,11 +76,10 @@ a:hover {
 .ham-burger:not(:last-child) > span {
   margin-bottom: 5px;
 }
-.header_middle .header_logo {
-  width: 56px;
-}
 .header_middle .header_logo img {
-  width: 100%;
+  /* background:red !important; */
+  width: 56px;
+  padding:6px 0;
 }
 
 /*-------------------------
@@ -176,7 +175,7 @@ a:hover {
   color: #fff;
   font-size: 11px;
   height: 20px;
-  right: 38px;
+  right: 56px;
   line-height: 20px;
   position: absolute;
   text-align: center;
@@ -252,7 +251,7 @@ a:hover {
 .home_slider .owl-carousel.owl-theme .owl-dots {
   position: absolute;
   bottom: 35px;
-  left: 400px;
+  left: 190px;
   height: 20px;
   background: #fff;
   border-radius: 20px;
@@ -285,6 +284,7 @@ a:hover {
     width: 167px;
     height: 90px;
   }
+
   .ham-burger {
     display: none !important;
   }
@@ -365,6 +365,12 @@ a:hover {
     display: flex;
     flex-direction: row;
   }
+  /* -----------------------------
+  Owl Carousel CSS (Header Slider)
+--------------------------------*/
+.home_slider .owl-carousel.owl-theme .owl-dots {
+  left: 400px;
+}
 }
 
 /* 

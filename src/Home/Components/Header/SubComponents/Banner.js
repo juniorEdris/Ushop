@@ -4,8 +4,8 @@ import Slider from './Slider'
 function Banner() {
     return (
         <div className=' container d-flex'>
-            <div className='col-3'></div>
-            <div className='col-9 home_banner'>
+            <div className='col-md-3 d-none d-md-block'></div>
+            <div className='col-md-9 col-12 home_banner'>
                 <Slider/>
             </div>
         </div>

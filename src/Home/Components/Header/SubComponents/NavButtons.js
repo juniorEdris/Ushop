@@ -5,7 +5,7 @@ function NavButtons() {
     const [userDropdown, setuserDropdown] = useState(false)
     const [cartActive, setCartActive] = useState(false)
     return (
-        <div className='nav_button col-2'>
+        <div className='nav_button col-6 col-lg-2'>
             <div className='float-right'>
                 <Link to='#'><span className='icon lnr lnr-heart'/></Link>
                 <Link to='#' onClick={()=>setCartActive(!cartActive)}><span className='icon lnr lnr-cart'/><span className='count'>4</span></Link>
