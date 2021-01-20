@@ -9,10 +9,12 @@ function HeaderLinks() {
     // Set currency dropDown
     const currencydown = () => {
         setCurrency(!currency)
+        setLanguage(false)
     }
     // Set language dropDown
     const languagedown = () => {
         setLanguage(!language)
+        setCurrency(false)
     }
     return (
         <div className='header_top_links container'>

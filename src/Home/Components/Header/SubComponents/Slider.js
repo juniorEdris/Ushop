@@ -32,6 +32,7 @@ function Slider() {
         items:1,
         nav:false,
         navSpeed:1000,
+        margin:10
     }
     return (
         <div className='home_slider'>
@@ -40,7 +41,7 @@ function Slider() {
               {...options}
               >
                 {banners.map((banner)=>(
-                <div className="slider-area">
+                <div className="slider-area col-12">
                     <div className="single-slider d-flex align-items-center" key={banner.id} style={{backgroundImage: `url(assets/images/${banner.image})`}}>
                             <div className="container-fluid">
                             <div className="row">

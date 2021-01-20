@@ -14,6 +14,7 @@
   font-family: var(--primary-font);
   font-size: 14px;
   line-height: 15px;
+  box-sizing: border-box;
 }
 
 /*-------------------------------
@@ -39,10 +40,125 @@ a:hover {
   text-decoration: none !important;
   color: var(--btn-color) !important;
 }
-.container {
-  padding: 0 !important;
+
+a,
+a:hover,
+a:focus,
+input,
+button,
+textarea,
+button:hover,
+button:focus {
+  outline: none;
+  text-decoration: none;
 }
 
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+ul,
+ol,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/*--------------------------------------------------------------------
+                        Typhography Settings
+--------------------------------------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 50px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 46px;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 32px;
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+h5 {
+  font-size: 15px;
+  line-height: 30px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+del {
+  text-decoration: line-through;
+}
+/*-------------------------
+  Product component Css
+---------------------------*/
+.product_container {
+  padding: 0px;
+  margin: 20px 0px;
+}
+.single_product {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid var(--muted-color);
+  border-radius: 6px;
+  text-transform: capitalize;
+}
+.single_product .product_image {
+  width: 100%;
+}
+.single_product .product_image img {
+  width: 100%;
+  max-width: 360px;
+  max-height: 300px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+.single_product .product_details {
+  padding: 5px;
+}
+.single_product .product_details div {
+  margin-top: 10px;
+}
+.single_product .product_details .product_name {
+  font-size: 18px;
+  line-height: 19px;
+  font-weight: 400;
+}
+.product_details .product_ratings span {
+  padding-right: 5px;
+}
+.product_details .product_ratings .product_rating_stars {
+}
+.product_details .product_ratings .product_rating_count {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--muted-color);
+}
 /*-------------------------
   Header All Css
 ---------------------------*/
@@ -66,20 +182,57 @@ a:hover {
   display: block !important;
   padding-top: 7px;
 }
-.ham-burger > span {
+.ham-burger a > span {
   height: 3px;
   width: 30px;
   display: flex;
   flex-direction: column;
   background: var(--btn-color);
 }
-.ham-burger:not(:last-child) > span {
+.ham-burger:not(:last-child) a > span {
   margin-bottom: 5px;
 }
 .header_middle .header_logo img {
   /* background:red !important; */
   width: 56px;
-  padding:6px 0;
+  padding: 6px 0;
+}
+
+/*-------------------------
+  Sidebar Component css
+---------------------------*/
+.sidebar_menu {
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  border: 2px solid var(--primary-color);
+  position: absolute;
+  left: -50%;
+  top: 0px;
+  z-index: 100;
+  padding-top: 18px;
+}
+.sidebar_open {
+  left: 0;
+}
+.sidebar_close_btn {
+  font-size: 18px;
+  font-weight: 900;
+  cursor: pointer;
+  float: right;
+}
+.sidebar_menu ul li:not(:last-child) a {
+  border-bottom: 1px solid var(--muted-color);
+}
+.sidebar_menu ul li a {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.sidebar_menu ul li a:hover {
+  background-color: var(--primary-color);
 }
 
 /*-------------------------
@@ -131,16 +284,6 @@ a:hover {
   position: relative;
   display: none;
 }
-.navigation_container {
-  /* display: none; */
-}
-/*-------------------------
-  Category dropdown CSS here
----------------------------*/
-
-.category_dropdown {
-  /* display: none; */
-}
 
 /*------------------------
   Page Routes component
@@ -162,7 +305,7 @@ a:hover {
   line-height: 50px;
   height: fit-content;
   padding-right: 0;
-  padding-top: 10px;
+  padding-top: 0px;
 }
 .nav_button span.icon {
   font-size: 28px;
@@ -173,30 +316,32 @@ a:hover {
   background-color: var(--btn-color);
   border-radius: 50%;
   color: #fff;
-  font-size: 11px;
-  height: 20px;
+  font-size: 10px;
+  height: 16px;
   right: 56px;
-  line-height: 20px;
+  line-height: 16px;
   position: absolute;
   text-align: center;
-  top: 0px;
-  width: 20px;
+  top: -5px;
+  width: 16px;
 }
 .cart_drop_down {
   background-color: #fff;
   padding: 15px;
   border: 2px solid var(--primary-color);
-  top: 30px;
+  top: 100%;
   right: 20px;
   position: absolute;
+  z-index: 100;
 }
 .user_drop_down {
   background-color: #fff;
   padding: 15px;
   border: 2px solid var(--primary-color);
-  top: 30px;
+  top: 100%;
   right: 0px;
   position: absolute;
+  z-index: 100;
 }
 
 /*-------------------------------------
@@ -205,11 +350,14 @@ a:hover {
 .slider-area {
   width: 100%;
   position: relative;
+  margin-top: 10px;
 }
 .single-slider {
+  border-radius: 10px;
   background-position: center center;
   background-size: cover;
   height: 400px;
+  width: 100%;
 }
 
 .slider-text h1 {
@@ -246,12 +394,12 @@ a:hover {
 }
 
 /* -----------------------------
-  Owl Carousel CSS (Header Slider)
+  Owl Carousel CSS (Header Slider) All breakpoints
 --------------------------------*/
 .home_slider .owl-carousel.owl-theme .owl-dots {
   position: absolute;
   bottom: 35px;
-  left: 190px;
+  left: 45%;
   height: 20px;
   background: #fff;
   border-radius: 20px;
@@ -265,6 +413,40 @@ a:hover {
   border: none;
 }
 
+/* -----------------------------
+  Features Card CSS
+--------------------------------*/
+.features_card {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.f_card {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--muted-color);
+  padding: 15px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.f_card_img img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+.f_card_details h3 {
+  font-weight: 600;
+}
+.f_card_details p {
+  font-size: 14px;
+  line-height: 17px;
+}
+.f_card div > img,
+.f_card div > h3,
+.f_card div > p {
+  margin: 5px 0 !important;
+}
 /* XL Device :1200px. */
 @media (min-width: 1200px) and (max-width: 1500px) {
   /*-------------------------
@@ -288,6 +470,9 @@ a:hover {
   .ham-burger {
     display: none !important;
   }
+  .sidebar_menu {
+    display: none;
+  }
   .header_middle .header_logo img {
     width: 100%;
     height: 100%;
@@ -301,6 +486,7 @@ a:hover {
     padding: 0px !important;
     height: 100%;
   }
+
   /*-------------------------
   Header Service Info css
 ---------------------------*/
@@ -365,12 +551,30 @@ a:hover {
     display: flex;
     flex-direction: row;
   }
+  .nav_button {
+    padding-top: 10px;
+  }
+  .nav_button span.count {
+    font-size: 11px;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    top: 0px;
+  }
+
   /* -----------------------------
-  Owl Carousel CSS (Header Slider)
+  Features Card CSS
 --------------------------------*/
-.home_slider .owl-carousel.owl-theme .owl-dots {
-  left: 400px;
-}
+  .features_card {
+    font-size: 25px !important;
+  }
+  .f_card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  /*XL Device :1200px. media ends here */
 }
 
 /* 
