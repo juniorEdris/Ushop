@@ -22,7 +22,7 @@ function HeaderMiddle() {
             <Logo />
             <SearchInput />
             <ServiceContact />
-            <div className=' nav_button col-6 d-xl-none d-block'>
+            <div className=' nav_button col-sm-7 col-6 d-xl-none d-block'>
                 <div className='float-right'>
                 <Link to='#'><span className='icon lnr lnr-heart'/></Link>
                 <Link to='#' onClick={CartDropdown}><span className='icon lnr lnr-cart'/><span className='count'>4</span></Link>

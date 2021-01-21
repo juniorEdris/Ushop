@@ -41,8 +41,8 @@ function Slider() {
               {...options}
               >
                 {banners.map((banner)=>(
-                <div className="slider-area col-12">
-                    <div className="single-slider d-flex align-items-center" key={banner.id} style={{backgroundImage: `url(assets/images/${banner.image})`}}>
+                <div className="slider-area col-12" key={banner.id}>
+                    <div className="single-slider d-flex align-items-center"  style={{backgroundImage: `url(assets/images/${banner.image})`}}>
                             <div className="container-fluid">
                             <div className="row">
                                 <div className="col-sm-6 col-sm-8">

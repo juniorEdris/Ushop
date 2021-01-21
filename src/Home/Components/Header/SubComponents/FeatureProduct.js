@@ -1,15 +1,13 @@
 import React from 'react'
 import FeatureProdNav from './FeatureProdNav'
-import Products from './Products'
+import FeatureProductSlider from './FeatureProductSlider'
 
 function FeatureProduct() {
     return (
-        <div className='feature_product'>
-            <div className="container">
+        <div className='feature_product container'>
                 <FeatureProdNav/>
-                <Products/>
+                <FeatureProductSlider/>
             </div>
-        </div>
     )
 }
 

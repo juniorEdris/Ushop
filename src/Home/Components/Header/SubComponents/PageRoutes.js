@@ -7,7 +7,7 @@ export default function PageRoutes() {
         <nav className='col-7 route_page_links'>
             <ul className='d-flex page_links'>
                 {routes.map(x=>(
-                    <Link to={`/${x}`}><li>{x}</li></Link>
+                    <Link to={`/${x}`} key={x}><li>{x}</li></Link>
                 ))}
             </ul>
         </nav>

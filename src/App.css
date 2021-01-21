@@ -4,6 +4,7 @@
   --btn-color: #0f0f1d;
   --muted-color: #8b8b8b;
   --secondary-muted-color: #707070;
+  --light-color: #fff;
   --primary-font: 'Lato', sans-serif;
 }
 * {
@@ -114,6 +115,9 @@ p {
 del {
   text-decoration: line-through;
 }
+.selected {
+  color: var(--primary-color) !important;
+}
 /*-------------------------
   Product component Css
 ---------------------------*/
@@ -122,7 +126,7 @@ del {
   margin: 20px 0px;
 }
 .single_product {
-  width: 100%;
+  width: fit-content;
   padding: 15px;
   border: 1px solid var(--muted-color);
   border-radius: 6px;
@@ -139,7 +143,7 @@ del {
   object-fit: contain;
 }
 .single_product .product_details {
-  padding: 5px;
+  padding: 10px 0px 0 15px;
 }
 .single_product .product_details div {
   margin-top: 10px;
@@ -149,15 +153,57 @@ del {
   line-height: 19px;
   font-weight: 400;
 }
+.product_details .product_ratings {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+}
 .product_details .product_ratings span {
   padding-right: 5px;
 }
 .product_details .product_ratings .product_rating_stars {
+  display: flex;
+  color: goldenrod;
+}
+.product_details .product_ratings .product_rating_stars h3 {
+  margin-right: 2px;
 }
 .product_details .product_ratings .product_rating_count {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 16px;
-  color: var(--muted-color);
+  opacity: 0.5 !important;
+  color: var(--secondary-muted-color);
+}
+.product_details .product_price span {
+  margin-right: 10px;
+}
+.product_details .product_price .price {
+  font-size: 18px;
+  line-height: 16px;
+  font-weight: 600;
+}
+.product_details .product_price .previous_price {
+  font-size: 18px;
+  line-height: 16px;
+  font-weight: 400;
+}
+.single_product .product_buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.single_product .product_buttons div {
+  margin-right: 10px;
+}
+.single_product .product_buttons .add_button button {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 16px;
+}
+.single_product .product_buttons .additional_buttons span {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 /*-------------------------
   Header All Css
@@ -204,7 +250,7 @@ del {
 .sidebar_menu {
   width: 50%;
   height: 100%;
-  background: #fff;
+  background: var(--light-color);
   border: 2px solid var(--primary-color);
   position: absolute;
   left: -50%;
@@ -315,7 +361,7 @@ del {
 .nav_button span.count {
   background-color: var(--btn-color);
   border-radius: 50%;
-  color: #fff;
+  color: var(--light-color);
   font-size: 10px;
   height: 16px;
   right: 56px;
@@ -326,7 +372,7 @@ del {
   width: 16px;
 }
 .cart_drop_down {
-  background-color: #fff;
+  background-color: var(--light-color);
   padding: 15px;
   border: 2px solid var(--primary-color);
   top: 100%;
@@ -335,7 +381,7 @@ del {
   z-index: 100;
 }
 .user_drop_down {
-  background-color: #fff;
+  background-color: var(--light-color);
   padding: 15px;
   border: 2px solid var(--primary-color);
   top: 100%;
@@ -361,7 +407,7 @@ del {
 }
 
 .slider-text h1 {
-  color: #fff;
+  color: var(--light-color);
   font-size: 31px;
   line-height: 38px;
   text-transform: capitalize;
@@ -374,7 +420,7 @@ del {
   margin-bottom: 55px;
   margin-top: 20px;
   line-height: 25px;
-  color: #fff;
+  color: var(--light-color);
 }
 
 .btn-1.home-btn {
@@ -390,7 +436,7 @@ del {
 
 .btn-1.home-btn:hover {
   background: var(--primary-color);
-  color: #fff !important;
+  color: var(--light-color) !important;
 }
 
 /* -----------------------------
@@ -401,7 +447,7 @@ del {
   bottom: 35px;
   left: 45%;
   height: 20px;
-  background: #fff;
+  background: var(--light-color);
   border-radius: 20px;
 }
 .home_slider .owl-carousel.owl-theme .owl-dots .owl-dot span {
@@ -447,7 +493,84 @@ del {
 .f_card div > p {
   margin: 5px 0 !important;
 }
-/* XL Device :1200px. */
+
+/*------------------------------------
+    Featured Product CSS here
+--------------------------------------*/
+
+.feature_product {
+  text-transform: capitalize;
+}
+.featured_product_nav {
+}
+.featured_product_nav .section_name h3 {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+.featured_product_nav .section_name h3::after {
+  content: '';
+  flex: 1;
+  margin-left: 1rem;
+  height: 2px;
+  border-radius: 6px;
+  background-color: var(--btn-color);
+}
+.featured_product_nav .box-tab ul {
+  display: flex;
+  justify-content: space-around;
+}
+.featured_product_nav .box-tab ul li {
+}
+.featured_product_nav .box-tab ul li a {
+  padding: 5px;
+}
+.feature_product_slider {
+  position: relative;
+}
+.feature_product_slider .owl-carousel.owl-theme .owl-nav {
+  position: absolute;
+  top: -18%;
+  right: 0%;
+}
+.feature_product_slider .owl-nav .owl-prev,
+.feature_product_slider .owl-nav .owl-next {
+  border: red !important;
+}
+.feature_product_slider .owl-carousel.owl-theme .owl-nav .owl-prev span,
+.feature_product_slider .owl-carousel.owl-theme .owl-nav .owl-next span {
+  font-size: 2rem;
+}
+.wide_banner {
+  position: relative;
+}
+.wide_banner .banner_img img {
+  object-fit: contain;
+}
+.wide_banner .banner_text {
+  position: absolute;
+  top: 20%;
+}
+.wide_banner .banner_text {
+  color: var(--light-color);
+}
+.wide_banner .banner_text h2 {
+  font-weight: 700;
+}
+.wide_banner .banner_text p {
+  font-size: 16px;
+}
+.wide_banner .banner_text .banner_btn {
+  border-radius: none;
+  background: var(--primary-color);
+  text-transform: capitalize;
+  padding: 0.5em 0.8em;
+  font-weight: 600;
+  font-size: 18px;
+}
+/*
+  XL Device :1200px.
+*/
 @media (min-width: 1200px) and (max-width: 1500px) {
   /*-------------------------
     Header Component CSS here
@@ -482,7 +605,7 @@ del {
     display: block !important;
   }
   .input-group {
-    background-color: #ffffff;
+    background-color: var(--light-color) fff;
     padding: 0px !important;
     height: 100%;
   }
@@ -504,7 +627,7 @@ del {
 ---------------------------*/
 
   .category_dropdown {
-    background-color: #fff;
+    background-color: var(--light-color);
     border: 2px solid var(--primary-color);
     position: absolute;
     top: 20;
@@ -572,6 +695,13 @@ del {
     display: flex;
     align-items: center;
     justify-content: space-around;
+  }
+
+  /* -----------------------------
+Featured product slider CSS
+--------------------------------*/
+  .feature_product_slider .owl-carousel.owl-theme .owl-nav {
+    top: -9%;
   }
 
   /*XL Device :1200px. media ends here */

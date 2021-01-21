@@ -31,17 +31,17 @@ function HeaderLinks() {
                 <ul className='header_top_right_links'>
                     <li> <Link to='/my-account'>My Account</Link></li>
                     <li> <Link to='#' onClick={currencydown}>
-                        Currency:<span className='selected_curr'>USD</span><span class="lnr lnr-chevron-down"/></Link>
+                        Currency:<span className='selected_curr'>USD</span><span className="lnr lnr-chevron-down"/></Link>
                         <ul className={`currency-dropdown ${currency ? ''  : 'd-hidden'}`}>
-                            <li><Link>USD</Link></li>
-                            <li><Link>TK</Link></li>
+                            <li><Link to='#'>USD</Link></li>
+                            <li><Link to='#'>TK</Link></li>
                         </ul>
                     </li>
                     <li> <Link to='#' onClick={languagedown}>
-                        Language:<span className='selected_lang '>BN</span><span class="lnr lnr-chevron-down"/></Link>
+                        Language:<span className='selected_lang '>BN</span><span className="lnr lnr-chevron-down"/></Link>
                          <ul className={`language-dropdown ${language ? '' :'d-hidden'}`}>
-                            <li>EN</li>
-                            <li>BN</li>
+                            <li><Link to='#'>EN</Link></li>
+                            <li><Link to='#'>BN</Link></li>
                         </ul>
                     </li>
                 </ul>

@@ -13,7 +13,7 @@ function MenuSideBar({open,setOpen}) {
             </div>
             <ul>
                 {routes.map(x=>(
-                    <li> <Link to={`/${x}`}>{x}</Link> </li>
+                    <li key={x}> <Link to={`/${x}`}>{x}</Link> </li>
                 ))}
             </ul>
         </aside>
