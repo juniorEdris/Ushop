@@ -1,7 +1,7 @@
 import React from 'react'
-import Dropdown from './Dropdown'
-import NavButtons from './NavButtons'
-import PageRoutes from './PageRoutes'
+import Dropdown from './Components/Dropdown'
+import NavButtons from './Components/NavButtons'
+import PageRoutes from './Components/PageRoutes'
 
 function Navigation() {
     return (

@@ -115,7 +115,8 @@ p {
 del {
   text-decoration: line-through;
 }
-.selected {
+.selected,
+.selected:hover {
   color: var(--primary-color) !important;
 }
 /*-------------------------
@@ -129,8 +130,12 @@ del {
   width: fit-content;
   padding: 15px;
   border: 1px solid var(--muted-color);
-  border-radius: 6px;
+  border-radius: 0.375rem;
   text-transform: capitalize;
+}
+.single_product .product_image a {
+  width: 100%;
+  display: block;
 }
 .single_product .product_image {
   width: 100%;
@@ -139,7 +144,7 @@ del {
   width: 100%;
   max-width: 360px;
   max-height: 300px;
-  border-radius: 6px;
+  border-radius: 0.375rem;
   object-fit: contain;
 }
 .single_product .product_details {
@@ -399,7 +404,7 @@ del {
   margin-top: 10px;
 }
 .single-slider {
-  border-radius: 10px;
+  border-radius: 0.625rem;
   background-position: center center;
   background-size: cover;
   height: 400px;
@@ -448,7 +453,7 @@ del {
   left: 45%;
   height: 20px;
   background: var(--light-color);
-  border-radius: 20px;
+  border-radius: 1.25rem;
 }
 .home_slider .owl-carousel.owl-theme .owl-dots .owl-dot span {
   margin: 5px 5px;
@@ -513,7 +518,7 @@ del {
   flex: 1;
   margin-left: 1rem;
   height: 2px;
-  border-radius: 6px;
+  border-radius: 0.375rem;
   background-color: var(--btn-color);
 }
 .featured_product_nav .box-tab ul {
@@ -525,6 +530,7 @@ del {
 .featured_product_nav .box-tab ul li a {
   padding: 5px;
 }
+
 .feature_product_slider {
   position: relative;
 }
@@ -541,11 +547,25 @@ del {
 .feature_product_slider .owl-carousel.owl-theme .owl-nav .owl-next span {
   font-size: 2rem;
 }
+/*------------------------------------
+    Wide Banner CSS here
+--------------------------------------*/
 .wide_banner {
   position: relative;
+  height: 300px;
+  /* background: var(--primary-color);
+  opacity: 0.6; */
+}
+.wide_banner .banner_img {
+  height: 100%;
 }
 .wide_banner .banner_img img {
   object-fit: contain;
+  /*display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 500px; */
 }
 .wide_banner .banner_text {
   position: absolute;
@@ -558,7 +578,7 @@ del {
   font-weight: 700;
 }
 .wide_banner .banner_text p {
-  font-size: 16px;
+  font-size: 1.2rem;
 }
 .wide_banner .banner_text .banner_btn {
   border-radius: none;
@@ -566,10 +586,66 @@ del {
   text-transform: capitalize;
   padding: 0.5em 0.8em;
   font-weight: 600;
+  font-size: 1rem;
+}
+/*------------------------------------
+    Best Sellers CSS here
+--------------------------------------*/
+/* Best sellers nav  */
+.best_sellers_nav .section_name h3 {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+.best_sellers_nav .section_name h3::after {
+  content: '';
+  flex: 1;
+  margin-left: 1rem;
+  height: 2px;
+  border-radius: 0.375rem;
+  background-color: var(--btn-color);
+}
+/* Best sellers products  */
+.best_sellers_products {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* Best sellers headers  */
+.best_heading_product {
+  width: 100%;
+  border: 1px solid var(--muted-color);
+  border-radius: 0.375rem;
+}
+
+.best_heading_product .best_heading_img {
+  width: 100%;
+}
+.best_heading_product .best_heading_img img {
+  width: 100%;
+  /* max-width: 360px; */
+  max-height: 300px;
+  border-radius: 0.375rem;
+  object-fit: contain;
+}
+.best_heading_product .best_heading_product_details {
+  padding: 10px 0px 0px 15px;
+}
+.best_heading_product_details div {
+  margin-top: 10px;
+}
+.best_heading_product_details .product_name {
   font-size: 18px;
+  line-height: 19px;
+  font-weight: 400;
+}
+/* Best sellers products container  */
+.best_product_container {
+  display: flex;
+  flex-wrap: wrap;
 }
 /*
-  XL Device :1200px.
+XL Device :1200px.
 */
 @media (min-width: 1200px) and (max-width: 1500px) {
   /*-------------------------
@@ -703,6 +779,9 @@ Featured product slider CSS
   .feature_product_slider .owl-carousel.owl-theme .owl-nav {
     top: -9%;
   }
+  /* -----------------------------
+Wide banner slider CSS
+--------------------------------*/
 
   /*XL Device :1200px. media ends here */
 }

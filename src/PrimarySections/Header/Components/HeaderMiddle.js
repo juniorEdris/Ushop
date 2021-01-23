@@ -1,9 +1,9 @@
 import React,{useState} from 'react'
 import { Link } from 'react-router-dom'
-import Hamburger from './Hamburger'
-import Logo from './Logo'
-import SearchInput from './SearchInput'
-import ServiceContact from './ServiceContact'
+import Hamburger from './subComponent/Hamburger'
+import Logo from './subComponent/Logo'
+import SearchInput from './subComponent/SearchInput'
+import ServiceContact from './subComponent/ServiceContact'
 
 function HeaderMiddle() {
     const [userDropdown, setuserDropdown] = useState(false)

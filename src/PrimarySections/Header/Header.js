@@ -1,7 +1,7 @@
 import React from 'react'
 import './header.css'
-import HeaderMiddle from './SubComponents/HeaderMiddle'
-import HeaderTop from './SubComponents/HeaderTop'
+import HeaderMiddle from './Components/HeaderMiddle'
+import HeaderTop from './Components/HeaderTop'
 
 
 function Header() {

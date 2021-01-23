@@ -2,17 +2,16 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 function Products({product}) {
-
     return (
         <div className='product_container col-12'>
             <div className="row">
                 <div className='single_product' key={product.id}>
-                    <div className="row" key={product.id}>
-                        <Link to='/product-details'>
-                            <div className="product_image">
-                                <img src={`assets/images/featuredProducts/${product.image}`} alt={product.name}/>
-                            </div>
-                        </Link>
+                    <div className="row">
+                        <div className="product_image">
+                            <Link to='/product-details'>
+                                <img src={`assets/images/best_products/${product.image}`} alt={product.name}/>
+                            </Link>
+                        </div>
                         <div className="product_details">
                             <div className="product_name">{product.name}</div>
                         
@@ -30,7 +29,7 @@ function Products({product}) {
                             </div>
                             <div className="product_price">
                                 <span className="price">$ {product.price}</span>
-                                <span className="previous_price"> <del>$ {product.previousPrice}</del></span>
+                                {product.previousPrice && <span className="previous_price"> <del>$ {product.previousPrice}</del></span>}
                             </div>
                             <div className="product_buttons">
                                 <div className='add_button'>

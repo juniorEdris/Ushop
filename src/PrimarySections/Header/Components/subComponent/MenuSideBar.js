@@ -1,11 +1,18 @@
-import React from 'react'
+import React,{useCallback} from 'react'
 import { Link } from 'react-router-dom'
 
 function MenuSideBar({open,setOpen}) {
+    console.log('hambergur');
+    const toggleHamburger = useCallback(
+        () => {
+            setOpen(!open)
+        },
+        [open,setOpen],
+    )
     const routes = ['home','megamenu','shop','accounts','blog','pages','buy theme',]
     return (
         <aside className={`${open && 'sidebar_open'} sidebar_menu`}>
-            <div className='sidebar_close_btn pl-3 pr-3' onClick={()=>setOpen(!open)}>x</div>
+            <div className='sidebar_close_btn pl-3 pr-3' onClick={toggleHamburger}>x</div>
             <div className='mb-3 col-12 d-flex justify-content-center'>
                 <Link to='/'>
                     <img src="assets/images/logo.png" alt="Ushop logo"/>
@@ -20,4 +27,4 @@ function MenuSideBar({open,setOpen}) {
     )
 }
 
-export default MenuSideBar
+export default React.memo(MenuSideBar)

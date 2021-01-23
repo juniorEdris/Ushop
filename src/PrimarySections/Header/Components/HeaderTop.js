@@ -1,5 +1,5 @@
 import React from 'react'
-import HeaderLinks from './HeaderLinks'
+import HeaderLinks from './subComponent/HeaderLinks'
 
 function HeaderTop() {
     return (
