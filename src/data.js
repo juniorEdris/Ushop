@@ -56,6 +56,56 @@ export const products = [
     previousPrice:244.42,
     },
 ]
+export const bestproducts = [
+    {
+    id:1,
+    image:'category-2.png',
+    name:'hand tool kit',
+    reviews:5,
+    price:149.24,
+    previousPrice:244.42,
+    },
+    {
+    id:2,
+    image:'category-2.png',
+    name:'hand tool kit',
+    reviews:5,
+    price:149.24,
+    previousPrice:244.42,
+    },
+    {
+    id:3,
+    image:'category-2.png',
+    name:'hand tool kit',
+    reviews:5,
+    price:149.24,
+    previousPrice:244.42,
+    },
+    {
+    id:4,
+    image:'category-2.png',
+    name:'hand tool kit',
+    reviews:5,
+    price:149.24,
+    previousPrice:244.42,
+    },
+    {
+    id:5,
+    image:'category-2.png',
+    name:'hand tool kit',
+    reviews:5,
+    price:149.24,
+    previousPrice:244.42,
+    },
+    {
+    id:6,
+    image:'category-2.png',
+    name:'hand tool kit',
+    reviews:5,
+    price:149.24,
+    previousPrice:244.42,
+    },
+]
 export const ptProducts = [
     {
     id:8,
