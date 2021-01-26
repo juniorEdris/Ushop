@@ -58,7 +58,7 @@ function BestSellersProducts() {
                 {/* right div starts here*/}
                 <div className="best_product_container col-sm-12 col-md-8 pl-sm-0 pl-md-3 pr-md-0">
                 {bestproducts.map(product=>(
-                    <div className="best_single_item col-md-4 col-12 mb-3 mr-3">{/* mr-1*/}
+                    <div className="best_single_item col-md-4 col-12 mb-3 mr-0">{/* mr-1*/}
                         <div className="best_item_img">
                             <Link to='/product-details'>
                                 <img src={`assets/images/best_products/category-2.png`} alt={product.name}/>
